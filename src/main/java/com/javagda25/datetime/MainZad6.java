@@ -42,7 +42,9 @@ public class MainZad6 {
             dlugoscZyciaPoUwzglednieniuPlci = (wyjsciowaDlugoscZyciaWMiesiacach - 10 * 12);
             if (palacy == 'y') {
                 dlugoscZyciaPoUwzglednieniuPapierosow = (dlugoscZyciaPoUwzglednieniuPlci - (9 * 12 + 3));
+                if (czyWStresie == 'y') {
 
+                }
             } else {
                 dlugoscZyciaPoUwzglednieniuPapierosow = dlugoscZyciaPoUwzglednieniuPlci;
             }

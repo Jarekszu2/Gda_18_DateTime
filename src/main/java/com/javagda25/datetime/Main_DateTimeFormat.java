@@ -9,12 +9,12 @@ public class Main_DateTimeFormat {
     public static void main(String[] args) {
 
         LocalDateTime dateTime = LocalDateTime.now();
-
+        System.out.println("data i czas niesformatowany: " + dateTime);
         // Zmiana - Mamy datę/czas i chcę ją wypisać w zadanym formacie
         // stwórz formatter o podanym formacie
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         String wynik = dateTimeFormatter.format(dateTime);
-        System.out.println(wynik);
+        System.out.println("data i czas sformatowany: " + wynik);
 
         // mam tekst który jest (lub nie) w zadanym formacie i chcę go zmienić na obiekt data/czas
         Scanner scanner = new Scanner(System.in);

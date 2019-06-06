@@ -1,21 +1,25 @@
 package com.javagda25.datetime;
 
+/*
+Napisz aplikację, która wyświetli datę sprzed 10 dni i datę za dziesięć dni.
+Wskazówka: skorzystaj z metody plusDays() na obiekcie LocalDate.
+ */
+
 import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 
 public class MainZad2 {
     public static void main(String[] args) {
         System.out.println();
 
-        LocalDate data_start = LocalDate.of(2019,06, 05);
-        System.out.println(data_start);
-        LocalDate data_end = LocalDate.of(2019,05, 02);
-        System.out.println(data_end);
+        LocalDate data = LocalDate.now();
+        System.out.println("data: " + data);
 
-        Period period = Period.between(data_start, data_end);
-        DateTimeFormatter datTimFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        // datTimFormat.
-        System.out.println("Minęło: " + period.getMonths() + " " + period.getDays());
+        System.out.println();
+        LocalDate dataMinus10 = data.minusDays(10);
+        System.out.println("data(-10): " + dataMinus10);
+
+        System.out.println();
+        LocalDate dataPlus10 = data.plusDays(10l);
+        System.out.println("data(+10): " + dataPlus10);
     }
 }
