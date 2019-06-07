@@ -22,8 +22,7 @@ if (losowaLiczba < 10) {
 **(+300pkt) Dodaj nowe dodatkowe warunki i randomizuj niektóre wartości
  */
 
-import java.time.LocalDate;
-import java.time.Period;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -32,6 +31,8 @@ import java.util.Scanner;
 public class MainZad6 {
     public static void main(String[] args) {
         System.out.println();
+
+        LocalTime localTimeStart = LocalTime.now();
 
         System.out.println("Program ustala datę śmierci pytającego:");
 
@@ -139,5 +140,11 @@ public class MainZad6 {
         int pozostalaDlugoscZyciaWDniach = ((dlugoscZyciaPoStresie * 30) - ((((years * 12) + months) * 30) + days));
         LocalDate dataOver = dataAktualna.plusDays(pozostalaDlugoscZyciaWDniach);
         System.out.println("data OVER: " + dataOver);
+
+        LocalTime localTimeEnd = LocalTime.now();
+        System.out.println(localTimeEnd);
+        System.out.println(localTimeStart);
+        Duration duration = Duration.between(localTimeStart, localTimeEnd);
+        System.out.println("straciłeś: " + duration.getSeconds() + " sekundy na głupoty!");
     }
 }
