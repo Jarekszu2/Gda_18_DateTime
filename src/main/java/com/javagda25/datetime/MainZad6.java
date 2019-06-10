@@ -43,7 +43,7 @@ public class MainZad6 {
         String dataRegex = "";
         do {
             try {
-                dataRegex = scanner.next("^\\d{4}-\\d{2}-\\d{2}$");
+                dataRegex = scanner.next("\\d{4}-\\d{2}-\\d{2}$");
                 poprawnaData = true;
             } catch (InputMismatchException ime) {
                 System.err.println("Zły format!");
