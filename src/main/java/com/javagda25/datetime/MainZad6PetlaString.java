@@ -28,7 +28,7 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MainZad6 {
+public class MainZad6PetlaString {
     public static void main(String[] args) {
         System.out.println();
 
